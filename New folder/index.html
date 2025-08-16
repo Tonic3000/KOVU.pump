@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$KOVU</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <section id="header" class="hero">
+      <video autoplay muted loop playsinline>
+        <source src="IMG_3401.MP4" type="video/mp4" />
+      </video>
+      <nav>
+        <a href="https://www.tiktok.com/@kovubp?_t=ZT-8yqHaTYbsYY&_r=1"
+          ><img src="download (1)-Photoroom (1).png" alt="Home"
+        /></a>
+        <a href="#about"
+          ><img src="download (3)-Photoroom.png" alt="About"
+        /></a>
+        <a href="https://x.com/kovuonsolana?s=11"
+          ><img src="images-Photoroom (1).png" alt="Campaign"
+        /></a>
+      </nav>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="content-section about">
+      <div class="about-text">
+        <h1>ABOUT KOVU</h1>
+        <p>
+          Meet Kovu 🐾✨ Kovu isn’t just a dog—he’s a story in motion. With his
+          striking red Siberian Husky coat and those soulful eyes, he’s captured
+          nearly a million hearts on TikTok. From pajama struts to playful
+          stares, every clip shows a pup who’s equal parts majestic and silly.
+          Kovu has this rare magic: he makes you smile without even trying. He’s
+          not just a pet—he’s a reminder that joy lives in wagging tails, soft
+          fur, and the simplest little moments. 💫
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="background.jpg" alt="About KOVU" />
+      </div>
+    </section>
+
+    <!-- SOLANA CAMPAIGN SECTION -->
+    <!-------- Solana Campaign Section -------->
+    <section id="solana-campaign" class="campaign">
+      <h1>🐾 KOVU Enters the Solana Space 🌌</h1>
+      <div class="campaign-content">
+        <div class="campaign-text">
+          <p>
+            Kovu isn’t just melting hearts—he’s stepping into the future. With
+            the launch of <strong>$KOVU</strong>, his very own Solana memecoin,
+            Kovu is building a community that’s all about fun, loyalty, and
+            unstoppable energy. 🚀✨
+          </p>
+        </div>
+
+        <div class="campaign-media">
+          <img src="photo_2025-08-16_23-37-16.jpg" alt="Kovu Image 1" />
+          <video autoplay muted loop playsinline>
+            <source src="IMG_3384.MP4" type="video/mp4" />
+          </video>
+          <img src="photo_2025-08-16_23-38-28.jpg" alt="Kovu Image 2" />
+        </div>
+
+        <!-- Bullish text under media -->
+        <div class="bullish-text">
+          <p>
+            The pack is growing stronger every day, and
+            <strong>$KOVU</strong> is ready to run wild in the Solana jungle.
+            With community spirit, unstoppable hype, and a loyal fanbase, this
+            isn’t just a memecoin—it’s a movement. 🚀
+          </p>
+          <p>
+            🌟 <strong>Don’t miss the wave—this coin is set to be BIG.</strong>
+            Secure your spot in the pack and watch Kovu lead the charge to the
+            moon. 🌕🐺
+          </p>
+          <p class="ca">
+            📌 Contract Address: <br />
+            <strong>6kreK2oNJpVweA4wXA5vUsyhtcXxDhANRk1w3BbCpump</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+      <p>© 2025 $KOVU. All rights reserved.</p>
+      <p>Follow us on <a href="#">Twitter</a> | <a href="#">Discord</a></p>
+    </footer>
+  </body>
+
+  <script>
+    // Function to reveal sections when in viewport
+    const sections = document.querySelectorAll("section");
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      sections.forEach((section) => {
+        const boxTop = section.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+          section.classList.add("show");
+        }
+      });
+    };
+
+    // Run on scroll + on load
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</html>

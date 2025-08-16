@@ -1,0 +1,199 @@
+/* Make video act as background */
+.hero {
+  position: relative;
+  height: 100vh; /* header takes full screen */
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* force video to fill width */
+  height: 100%;  /* force video to fill height */
+  object-fit: fill; /* stretch instead of crop/contain */
+  z-index: -1;
+}
+
+/* Nav styling */
+.hero nav {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+}
+nav a {
+  margin: 0 15px;
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+nav img:hover {
+  transform: scale(1.2);
+}
+nav img:hover {
+  transform: scale(1.2);
+}
+nav img {
+  width: 35px;   /* icon size */
+  height: 35px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* make icons white if dark */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+nav img:hover {
+  transform: scale(1.2);         /* zoom effect on hover */
+  filter: brightness(1) invert(0); /* change color on hover */
+}
+/* About section two-column layout */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+  background: #f5f5f5;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* Solana Campaign Section */
+.campaign {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111; /* dark background for contrast */
+  color: #fff;
+}
+
+.campaign h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.campaign-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.campaign-text {
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.campaign-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.campaign-media img,
+.campaign-media video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.bullish-text {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.bullish-text strong {
+  color: #ffcc00; /* makes it pop */
+}
+
+.bullish-text .ca {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #00ffcc; /* highlight the CA */
+  word-break: break-all;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+/* Content sections */
+.content-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Solana campaign section styling */
+#campaign {
+  background: #ffe55c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+/* Hidden by default */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* When visible */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
