@@ -3,7 +3,7 @@
 .hero {
   position: relative;
   height: 100vh;
-  background: url("background.jpg") no-repeat center center/cover;
+  background: url("KOVU.png") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,19 +11,9 @@
   color: white;
 }
 
-/* Dark overlay so text is readable */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
 /* Nav stays on top */
 nav {
-  position: absolute;
+  position: relative;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -31,23 +21,6 @@ nav {
   display: flex;
   gap: 20px;
 }
-
-/* Text styling */
-.hero-text {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-text h1 {
-  font-size: 5rem;
-  letter-spacing: 5px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
-  margin: 1px;
-}
-
 .hero-text p {
   margin: 1px;
   font-size: 2.0rem;
@@ -67,7 +40,7 @@ nav {
   justify-content: center;
   gap: 30px;
   z-index: 2;
-  background: rgba(0,0,0,0.4);
+  background: rgba(139, 139, 139, 0.4);
 }
 
 nav img {
