@@ -1,61 +1,109 @@
 /* Make video act as background */
+/* Background photo */
 .hero {
   position: relative;
-  height: 100vh; /* header takes full screen */
-  overflow: hidden;
+  height: 100vh;
+  background: url("background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
-.hero video {
+/* Dark overlay so text is readable */
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;   /* force video to fill width */
-  height: 100%;  /* force video to fill height */
-  object-fit: fill; /* stretch instead of crop/contain */
-  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Nav stays on top */
+nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 20px;
+}
+
+/* Text styling */
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+  margin: 1px;
+}
+
+.hero-text p {
+  margin: 1px;
+  font-size: 2.0rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #f73c3c;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 /* Nav styling */
-.hero nav {
+nav {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.4);
-}
-nav a {
-  margin: 0 15px;
+  top: 0px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
 }
 
 nav img {
-  width: 40px;
-  height: 40px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s;
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 nav img:hover {
   transform: scale(1.2);
 }
-nav img:hover {
-  transform: scale(1.2);
-}
-nav img {
-  width: 35px;   /* icon size */
-  height: 35px;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* make icons white if dark */
-  transition: transform 0.3s, filter 0.3s;
-}
+  nav img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+  }
 
-nav img:hover {
-  transform: scale(1.2);         /* zoom effect on hover */
-  filter: brightness(1) invert(0); /* change color on hover */
-}
+  nav img:hover {
+    transform: scale(1.2);
+  }
+  nav img:hover {
+    transform: scale(1.2);
+  }
+nav img {
+    width: 35px;   /* icon size */
+    height: 35px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* make icons white if dark */
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  nav img:hover {
+    transform: scale(1.2);         /* zoom effect on hover */
+    filter: brightness(1) invert(0); /* change color on hover */
+  }
 /* About section two-column layout */
 .about {
   display: flex;
@@ -63,8 +111,12 @@ nav img:hover {
   justify-content: space-between;
   padding: 80px 10%;
   gap: 40px;
-  background: #f5f5f5;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #444cf7, #e5e5f7), repeating-radial-gradient(circle at center center, #444cf7, #444cf7, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
 }
+
 
 .about-text {
   flex: 1;
@@ -74,6 +126,7 @@ nav img:hover {
 .about-text h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #2f448a;
 }
 
 .about-text p {
